@@ -87,7 +87,7 @@ namespace AddIn.Logging.Test
             // Prepare
             const string format = "Number of Call: {0} occurred";
             logger.Setup(l => l.Write(
-                       LogEventLevel.Debug, format, 1))
+                       LogEventLevel.Debug, format, new object[] { 1 }))
                     .Verifiable();
             log = new SerilogLogger(logger.Object);
 
@@ -156,7 +156,7 @@ namespace AddIn.Logging.Test
             // Prepare
             const string format = "Number of Call: {0} occurred";
             logger.Setup(l => l.Write(
-                       LogEventLevel.Error, format, 1))
+                       LogEventLevel.Error, format, new object[] { 1 }))
                     .Verifiable();
             log = new SerilogLogger(logger.Object);
 
@@ -225,7 +225,7 @@ namespace AddIn.Logging.Test
             // Prepare
             const string format = "Number of Call: {0} occurred";
             logger.Setup(l => l.Write(
-                       LogEventLevel.Information, format, 1))
+                       LogEventLevel.Information, format, new object[] { 1 }))
                     .Verifiable();
             log = new SerilogLogger(logger.Object);
 
@@ -294,7 +294,7 @@ namespace AddIn.Logging.Test
             // Prepare
             const string format = "Number of Call: {0} occurred";
             logger.Setup(l => l.Write(
-                       LogEventLevel.Fatal, format, 1))
+                       LogEventLevel.Fatal, format, new object[] { 1 }))
                     .Verifiable();
             log = new SerilogLogger(logger.Object);
 
@@ -363,7 +363,7 @@ namespace AddIn.Logging.Test
             // Prepare
             const string format = "Number of Call: {0} occurred";
             logger.Setup(l => l.Write(
-                       LogEventLevel.Warning, format, 1))
+                       LogEventLevel.Warning, format, new object[] { 1 }))
                     .Verifiable();
             log = new SerilogLogger(logger.Object);
 
